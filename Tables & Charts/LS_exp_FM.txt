@@ -1,0 +1,99 @@
+Length Scale experiment as per the configuration, we select ls=0.1 which gives maximum validation accuracy
+
+{'lgp0.0_ls0.05': [('val acc', 0.9252), ('test acc', 0.921), ('M auroc', 0.922841545), ('NM auroc', 0.9564724391155736)], 
+'lgp0.0_ls0.1': [('val acc', 0.9374), ('test acc', 0.9259), ('M auroc', 0.9506548850000001), ('NM auroc', 0.9281840605639821)], 
+'lgp0.0_ls0.2': [('val acc', 0.9302), ('test acc', 0.9241), ('M auroc', 0.955529875), ('NM auroc', 0.9414328321939758)], 
+'lgp0.0_ls0.3': [('val acc', 0.9324), ('test acc', 0.9207), ('M auroc', 0.94877926), ('NM auroc', 0.944572086626789)], 
+'lgp0.0_ls0.5': [('val acc', 0.9326), ('test acc', 0.9229), ('M auroc', 0.9427445600000001), ('NM auroc', 0.9318289387951294)],
+'lgp0.0_ls1.0': [('val acc', 0.9308), ('test acc', 0.9191), ('M auroc', 0.936194075), ('NM auroc', 0.8930923253578293)]}
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************************************************************************************************/
+ ### NEW MODEL ### 
+Validation Results - Epoch: 5 Acc: 0.9066 BCE: 0.06 GP: 0.592090 AUROC MNIST: 0.95 AUROC NotMNIST: 0.96 
+Sigma: 0.05
+Validation Results - Epoch: 10 Acc: 0.9092 BCE: 0.05 GP: 0.537892 AUROC MNIST: 0.91 AUROC NotMNIST: 0.96 
+Sigma: 0.05
+Validation Results - Epoch: 15 Acc: 0.9226 BCE: 0.04 GP: 0.481277 AUROC MNIST: 0.93 AUROC NotMNIST: 0.96 
+Sigma: 0.05
+Validation Results - Epoch: 20 Acc: 0.9224 BCE: 0.04 GP: 0.465910 AUROC MNIST: 0.92 AUROC NotMNIST: 0.96 
+Sigma: 0.05
+Validation Results - Epoch: 25 Acc: 0.9248 BCE: 0.04 GP: 0.464641 AUROC MNIST: 0.92 AUROC NotMNIST: 0.96 
+Sigma: 0.05
+Validation Results - Epoch: 30 Acc: 0.9252 BCE: 0.04 GP: 0.470627 AUROC MNIST: 0.92 AUROC NotMNIST: 0.96 
+Sigma: 0.05
+ ### NEW MODEL ### 
+Validation Results - Epoch: 5 Acc: 0.9218 BCE: 0.05 GP: 0.588712 AUROC MNIST: 0.95 AUROC NotMNIST: 0.94 
+Sigma: 0.1
+Validation Results - Epoch: 10 Acc: 0.9268 BCE: 0.05 GP: 0.420598 AUROC MNIST: 0.94 AUROC NotMNIST: 0.93 
+Sigma: 0.1
+Validation Results - Epoch: 15 Acc: 0.9354 BCE: 0.04 GP: 0.477725 AUROC MNIST: 0.95 AUROC NotMNIST: 0.93 
+Sigma: 0.1
+Validation Results - Epoch: 20 Acc: 0.9386 BCE: 0.04 GP: 0.453083 AUROC MNIST: 0.95 AUROC NotMNIST: 0.93 
+Sigma: 0.1
+Validation Results - Epoch: 25 Acc: 0.9360 BCE: 0.04 GP: 0.450054 AUROC MNIST: 0.95 AUROC NotMNIST: 0.93 
+Sigma: 0.1
+Validation Results - Epoch: 30 Acc: 0.9374 BCE: 0.04 GP: 0.450303 AUROC MNIST: 0.95 AUROC NotMNIST: 0.93 
+Sigma: 0.1
+ ### NEW MODEL ### 
+Validation Results - Epoch: 5 Acc: 0.9156 BCE: 0.05 GP: 0.613457 AUROC MNIST: 0.96 AUROC NotMNIST: 0.95 
+Sigma: 0.2
+Validation Results - Epoch: 10 Acc: 0.9210 BCE: 0.04 GP: 0.577395 AUROC MNIST: 0.94 AUROC NotMNIST: 0.95 
+Sigma: 0.2
+Validation Results - Epoch: 15 Acc: 0.9286 BCE: 0.04 GP: 0.527421 AUROC MNIST: 0.95 AUROC NotMNIST: 0.94 
+Sigma: 0.2
+Validation Results - Epoch: 20 Acc: 0.9292 BCE: 0.04 GP: 0.516934 AUROC MNIST: 0.95 AUROC NotMNIST: 0.94 
+Sigma: 0.2
+Validation Results - Epoch: 25 Acc: 0.9308 BCE: 0.04 GP: 0.508738 AUROC MNIST: 0.96 AUROC NotMNIST: 0.94 
+Sigma: 0.2
+Validation Results - Epoch: 30 Acc: 0.9302 BCE: 0.04 GP: 0.513231 AUROC MNIST: 0.96 AUROC NotMNIST: 0.94 
+Sigma: 0.2
+ ### NEW MODEL ### 
+Validation Results - Epoch: 5 Acc: 0.9126 BCE: 0.05 GP: 0.655917 AUROC MNIST: 0.93 AUROC NotMNIST: 0.96 
+Sigma: 0.3
+Validation Results - Epoch: 10 Acc: 0.9162 BCE: 0.05 GP: 0.630912 AUROC MNIST: 0.94 AUROC NotMNIST: 0.94 
+Sigma: 0.3
+Validation Results - Epoch: 15 Acc: 0.9292 BCE: 0.04 GP: 0.577355 AUROC MNIST: 0.95 AUROC NotMNIST: 0.95 
+Sigma: 0.3
+Validation Results - Epoch: 20 Acc: 0.9270 BCE: 0.04 GP: 0.551455 AUROC MNIST: 0.95 AUROC NotMNIST: 0.95 
+Sigma: 0.3
+Validation Results - Epoch: 25 Acc: 0.9310 BCE: 0.04 GP: 0.545296 AUROC MNIST: 0.95 AUROC NotMNIST: 0.94 
+Sigma: 0.3
+Validation Results - Epoch: 30 Acc: 0.9324 BCE: 0.04 GP: 0.538805 AUROC MNIST: 0.95 AUROC NotMNIST: 0.94 
+Sigma: 0.3
+ ### NEW MODEL ### 
+Validation Results - Epoch: 5 Acc: 0.9034 BCE: 0.05 GP: 0.649667 AUROC MNIST: 0.95 AUROC NotMNIST: 0.94 
+Sigma: 0.5
+Validation Results - Epoch: 10 Acc: 0.9254 BCE: 0.04 GP: 0.610651 AUROC MNIST: 0.94 AUROC NotMNIST: 0.95 
+Sigma: 0.5
+Validation Results - Epoch: 15 Acc: 0.9310 BCE: 0.04 GP: 0.554996 AUROC MNIST: 0.94 AUROC NotMNIST: 0.94 
+Sigma: 0.5
+Validation Results - Epoch: 20 Acc: 0.9318 BCE: 0.04 GP: 0.543863 AUROC MNIST: 0.94 AUROC NotMNIST: 0.94 
+Sigma: 0.5
+Validation Results - Epoch: 25 Acc: 0.9328 BCE: 0.04 GP: 0.530227 AUROC MNIST: 0.94 AUROC NotMNIST: 0.93 
+Sigma: 0.5
+Validation Results - Epoch: 30 Acc: 0.9326 BCE: 0.04 GP: 0.528820 AUROC MNIST: 0.94 AUROC NotMNIST: 0.93 
+Sigma: 0.5
+ ### NEW MODEL ### 
+Validation Results - Epoch: 5 Acc: 0.9068 BCE: 0.06 GP: 0.602171 AUROC MNIST: 0.93 AUROC NotMNIST: 0.93 
+Sigma: 1.0
+Validation Results - Epoch: 10 Acc: 0.9232 BCE: 0.05 GP: 0.538021 AUROC MNIST: 0.91 AUROC NotMNIST: 0.90 
+Sigma: 1.0
+Validation Results - Epoch: 15 Acc: 0.9278 BCE: 0.04 GP: 0.488998 AUROC MNIST: 0.94 AUROC NotMNIST: 0.90 
+Sigma: 1.0
+Validation Results - Epoch: 20 Acc: 0.9308 BCE: 0.04 GP: 0.467385 AUROC MNIST: 0.93 AUROC NotMNIST: 0.90 
+Sigma: 1.0
+Validation Results - Epoch: 25 Acc: 0.9324 BCE: 0.04 GP: 0.459861 AUROC MNIST: 0.93 AUROC NotMNIST: 0.89 
+Sigma: 1.0
+Validation Results - Epoch: 30 Acc: 0.9308 BCE: 0.04 GP: 0.456139 AUROC MNIST: 0.94 AUROC NotMNIST: 0.89 
+Sigma: 1.0
