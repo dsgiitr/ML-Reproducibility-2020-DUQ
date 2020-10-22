@@ -1,0 +1,23 @@
+DUQ 3 Runs, 30 epochs:
+{'lgp0.05_ls0.1': [('val acc', 0.9223666666666667), ('M auroc', 0.9379037183333333), ('NM auroc', 0.954409165598519)]}
+
+
+ ### NEW MODEL ### 
+Validation Results - Epoch: 30 Acc: 0.9223 BCE: 0.04 GP: 0.359028 AUROC MNIST: 0.9333 AUROC NotMNIST: 0.97 
+Sigma: 0.1
+ ### NEW MODEL ### 
+Validation Results - Epoch: 30 Acc: 0.9246 BCE: 0.04 GP: 0.194720 AUROC MNIST: 0.9267 AUROC NotMNIST: 0.93 
+Sigma: 0.1
+ ### NEW MODEL ### 
+Validation Results - Epoch: 5 Acc: 0.9053 BCE: 0.06 GP: 0.278220 AUROC MNIST: 0.8945 AUROC NotMNIST: 0.95 
+Sigma: 0.1
+Validation Results - Epoch: 10 Acc: 0.9017 BCE: 0.05 GP: 0.295229 AUROC MNIST: 0.9238 AUROC NotMNIST: 0.96 
+Sigma: 0.1
+Validation Results - Epoch: 15 Acc: 0.9184 BCE: 0.04 GP: 0.348950 AUROC MNIST: 0.9368 AUROC NotMNIST: 0.96 
+Sigma: 0.1
+Validation Results - Epoch: 20 Acc: 0.9203 BCE: 0.04 GP: 0.361989 AUROC MNIST: 0.9539 AUROC NotMNIST: 0.97 
+Sigma: 0.1
+Validation Results - Epoch: 25 Acc: 0.9209 BCE: 0.04 GP: 0.362778 AUROC MNIST: 0.9523 AUROC NotMNIST: 0.97 
+Sigma: 0.1
+Validation Results - Epoch: 30 Acc: 0.9202 BCE: 0.04 GP: 0.360838 AUROC MNIST: 0.9536 AUROC NotMNIST: 0.97 
+Sigma: 0.1
