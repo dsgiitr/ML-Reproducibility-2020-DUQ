@@ -1,0 +1,4 @@
+Epoch: 30:
+Train Set: Average Loss: 0.01
+Test set: Average loss: 0.2958, Accuracy: 9345/10000 (93.45%)
+Auroc MNIST ood: 97.16

@@ -1,6 +1,7 @@
 import numpy as np
 import torch
-from sklearn.metrics import roc_auc_score
+from torch.nn import functional as F
+from sklearn.metrics import (roc_auc_score, roc_curve)
 
 from utils.datasets import (
     get_CIFAR10,
@@ -76,7 +77,18 @@ def get_auroc_classification(dataset, model):
 
     return accuracy, roc_auc
 
+def get_ROC_mnist(model):
+    _, _, _, fashionmnist_test_dataset = get_FashionMNIST()
+    _, _, _, mnist_test_dataset = get_MNIST()
+    
+    dataloader, anomaly_targets = prepare_ood_datasets(fashionmnist_test_dataset, mnist_test_dataset)
 
+    scores, accuracies = loop_over_dataloader(model, dataloader)
+
+    accuracy = np.mean(accuracies[: len(fashionmnist_test_dataset)])
+    roc = roc_curve(anomaly_targets, scores)
+    
+    return roc
 def get_cifar_svhn_ood(model):
     _, _, _, cifar_test_dataset = get_CIFAR10()
     _, _, _, svhn_test_dataset = get_SVHN()
@@ -96,3 +108,5 @@ def get_fashionmnist_notmnist_ood(model):
     _, _, _, notmnist_test_dataset = get_notMNIST()
 
     return get_auroc_ood(fashionmnist_test_dataset, notmnist_test_dataset, model)
+
+    

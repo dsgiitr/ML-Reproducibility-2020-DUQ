@@ -1,0 +1,10 @@
+Accuracy on CIFAR, Trained on default config GP=0
+
+{'epoch': 10, 'Test accuracy': 0.7873, 'Ood/roc_auc': 0.8532417543792256, 'val_acc': 0.7873, 'auroc-uncertainity': 0.8273596518210369}
+{'epoch': 20, 'Test accuracy': 0.8551, 'Ood/roc_auc': 0.8223703941303012, 'val_acc': 0.8551, 'auroc-uncertainity': 0.8699435748598572}
+{'epoch': 30, 'Test accuracy': 0.9245, 'Ood/roc_auc': 0.9021758585586969, 'val_acc': 0.9245, 'auroc-uncertainity': 0.8964874516026202}
+{'epoch': 40, 'Test accuracy': 0.9109, 'Ood/roc_auc': 0.8884765538567917, 'val_acc': 0.9109, 'auroc-uncertainity': 0.8860511409455677}
+{'epoch': 50, 'Test accuracy': 0.9183, 'Ood/roc_auc': 0.9011189631991395, 'val_acc': 0.9183, 'auroc-uncertainity': 0.880859488243336}
+{'epoch': 60, 'Test accuracy': 0.9429, 'Ood/roc_auc': 0.879922247618316, 'val_acc': 0.9429, 'auroc-uncertainity': 0.8972922156353716}
+{'epoch': 74, 'Test accuracy': 0.9454, 'Ood/roc_auc': 0.8884570989551321, 'val_acc': 0.9454, 'auroc-uncertainity': 0.8936973399634708}
+{'epoch': 75, 'Test accuracy': 0.9435, 'Ood/roc_auc': 0.8656486343730794, 'val_acc': 0.9435, 'auroc-uncertainity': 0.8926433773700821}

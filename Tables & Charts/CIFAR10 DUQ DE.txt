@@ -1,0 +1,4 @@
+DUQ gp=0: 75 epoch, 1 run
+{'epoch': 75, 'Test accuracy': 0.9435, 'Ood/roc_auc': 0.8656486343730794, 'val_acc': 0.9435, 'auroc-uncertainity': 0.8926433773700821}
+DUQ gp=0.5: 75 epoch, 1 run
+{'epoch': 75, 'Test accuracy': 0.9202, 'Ood/roc_auc': 0.8652406922249539, 'val_acc': 0.9202, 'auroc-uncertainity': 0.9073757530099973}

@@ -1,0 +1,4 @@
+DUQ 3 Runs, 30 epochs:
+{'lgp0.05_ls0.1': [('val acc', 0.9223666666666667), ('test acc', 0.9223666666666667), ('M auroc', 0.9379037183333333), ('NM auroc', 0.954409165598519)]}
+DE papers architecture, 1 run, 30 epochs:
+{'AUROC(M)':97.16}
