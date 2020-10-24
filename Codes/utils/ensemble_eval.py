@@ -30,10 +30,10 @@ def get_fm_mnist_ood_ensemble(ensemble):
                 output_l.append(output)
             output_l = torch.stack(output_l)
 
-            kernel_distance=output_l.mean(0)
+            kernel_distance=output_l.exp().mean(0)
             pred=kernel_distance.argmax(1)
-            kernel_distance=F.cross_entropy(kernel_distance,target,reduction='none')
-            
+            kernel_distance=-(kernel_distance*torch.log(kernel_distance)).sum(1)
+
             accuracy = pred.eq(target)
             accuracies.append(accuracy.cpu().numpy())
             scores.append(kernel_distance.cpu().numpy())
@@ -60,10 +60,10 @@ def get_cifar10_svhn_ood_ensemble(ensemble):
                 output = model(data)
                 output_l.append(output)
             output_l = torch.stack(output_l)
-
-            kernel_distance=output_l.mean(0)
+            kernel_distance=output_l.exp().mean(0)
             pred=kernel_distance.argmax(1)
-            kernel_distance=F.cross_entropy(kernel_distance,target,reduction='none')
+
+            kernel_distance=-(kernel_distance*torch.log(kernel_distance)).sum(1)
             
             accuracy = pred.eq(target)
             accuracies.append(accuracy.cpu().numpy())
@@ -92,9 +92,10 @@ def get_ROC_mnist_ensemble(ensemble):
                 output_l.append(output)
             output_l = torch.stack(output_l)
 
-            kernel_distance=output_l.mean(0)
+            kernel_distance=output_l.exp().mean(0)
             pred=kernel_distance.argmax(1)
-            kernel_distance=F.cross_entropy(kernel_distance,target,reduction='none')
+            
+            kernel_distance=-(kernel_distance*torch.log(kernel_distance)).sum(1)
             
             accuracy = pred.eq(target)
             accuracies.append(accuracy.cpu().numpy())
