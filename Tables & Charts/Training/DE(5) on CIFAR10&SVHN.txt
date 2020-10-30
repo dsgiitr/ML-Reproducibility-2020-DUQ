@@ -1,0 +1,17 @@
+DE paper architecture epoch=35
+
+Epoch 10:
+Test set: Average loss: 0.5773, Accuracy: 8862/10000 (88.62%)
+{'cifar10_ood_auroc': 0.8769636812384758}
+
+Epoch 20:
+Test set: Average loss: 0.4131, Accuracy: 9170/10000 (91.70%)
+{'cifar10_ood_auroc': 0.951605322295636}
+
+Epoch 30:
+Test set: Average loss: 0.2104, Accuracy: 9444/10000 (94.44%)
+{'cifar10_ood_auroc': 0.9489377842655193}
+
+Epoch 35:
+Test set: Average loss: 0.2194, Accuracy: 9469/10000 (94.69%)
+{'cifar10_ood_auroc': 0.9363115300399506}
