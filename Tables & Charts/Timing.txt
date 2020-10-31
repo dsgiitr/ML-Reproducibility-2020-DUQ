@@ -1,0 +1,11 @@
+On a standard gpu:
+Performed On FMNIST, models according to paper:
+
+Training:
+DUQ gp=0.05: 23 sec
+DUQ without gp: 7 sec
+DE (5): 9*5 sec
+
+Testing:
+DUQ: 1 sec
+DE(5) : 2.3 sec
