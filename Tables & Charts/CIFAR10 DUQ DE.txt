@@ -1,6 +1,6 @@
 DUQ gp=0: 75 epoch, 1 run
 {'epoch': 75, 'Test accuracy': 0.9435, 'Ood/roc_auc': 0.8656486343730794, 'val_acc': 0.9435, 'auroc-uncertainity': 0.8926433773700821}
-DUQ gp=0.5: 60 epoch, 1 run
+DUQ gp=0.5: 60 epoch, 1 run: (at higher epochs - mnroc decreases, overfitting)
 {'epoch': 60, 'Test accuracy': 0.9345, 'Ood/roc_auc': 0.9313628342040565, 'val_acc': 0.9345, 'auroc-uncertainity': 0.9062182087004114}
 
 DE(5): 30 epoch, 1 run
