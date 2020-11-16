@@ -6,3 +6,9 @@ DUQ gp=0.5: 60 epoch, 1 run: (at higher epochs - mnroc decreases, overfitting)
 DE(5): 30 epoch, 1 run
 Test set: Average loss: 0.2104, Accuracy: 9444/10000 (94.44%)
 {'cifar10_ood_auroc': 0.9489377842655193}
+
+DE(1): 30 epoch, 1 run. Mean of 5
+{Accuracy:0.93202,
+cifar10_ood_auroc:0.913419290872772}
+
+

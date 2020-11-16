@@ -1,0 +1,43 @@
+Two Moons:
+Same results as that of paper ie
+DUQ gives better uncertainity estimates
+Single sided GP is not a good regularizer
+GP with Ftheta is in consistent for results
+
+FM:
+Almost same results ie DUQ has better AUROC than DE, and same accuracy
+DE(paper model) has more AUROC(FM+M) = 89 as mentioned in paper
+DUQ has slightly less = 94.1 (92 95 95), observed slight inconsistency, still much more than DE
+
+CIFAR10:
+Same results as that of paper
+Early stopping must be used for DUQ gp=0.5 at epoch=60
+DE achieves best performance after 30 epochs itself
+
+Rejection Classification:
+Almost same results
+On FM:
+DE has better performance compared to paper results, still DUQ dominates
+On CIFAR10:
+Performance according to paper, ie DE has slight/negligible advantage
+
+ROC on FM:
+Same as paper ie DUQ outperforms
+
+Histogram on CIFAR:
+Same as paper ie
+Confidence is spread out for ood but high for the actual test dataset
+
+GP exp on FM:
+gp=0.05 gave best validation accuracy on FM as described in paper
+
+LS exp on FM:
+Ls=0.1 gave the best AUROC(FM+M)as described in paper
+
+Timing
+Same results as paper ie
+DUQ is much faster and slightly slower than single model at testing
+DUQ without gp takes slighlty more time than single model at training
+DUQ with gp takes twice/thrice more time than single model at training
+DUQ gives the competitive edge
+
