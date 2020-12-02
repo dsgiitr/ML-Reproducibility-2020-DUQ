@@ -1,8 +1,0 @@
-DUQ gp=0: 75 epoch, 1 run
-{'epoch': 75, 'Test accuracy': 0.9435, 'Ood/roc_auc': 0.8656486343730794, 'val_acc': 0.9435, 'auroc-uncertainity': 0.8926433773700821}
-DUQ gp=0.5: 60 epoch, 1 run
-{'epoch': 60, 'Test accuracy': 0.9345, 'Ood/roc_auc': 0.9313628342040565, 'val_acc': 0.9345, 'auroc-uncertainity': 0.9062182087004114}
-
-DE(5): 30 epoch, 1 run
-Test set: Average loss: 0.2104, Accuracy: 9444/10000 (94.44%)
-{'cifar10_ood_auroc': 0.9489377842655193}
