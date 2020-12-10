@@ -4,7 +4,8 @@
 
 This repository is the reproduction of paper "Uncertainty Estimation Using a Single Deep Deterministic Neural Network" by Joost van Amersfoort, Lewis Smith, Yee Whye Teh, Yarin Gal. 
 
-All codes for training and experiments are provided. They are as colab notebooks. Additionally, py files are provided for training and testing.<br>
+
+All codes for training and experiments are provided. They are as colab notebooks. Additionally, py files are provided for training and testing. Training and models are based on codes provided by the author <br>
 
 ## Requirements
 
@@ -58,6 +59,7 @@ Performance of the model with our implementation at a glance:
 | Model name         | Accuracy on FM | Auroc-ood(M) | Train, Test Time*|
 | ------------------ |--------------- | ------------ | ---------------- |
 | DUQ with gp        |     92.34%     |     0.9411   |   23s and 1s     |
+| DUQ + our work     |     92.63%     |     0.9690   |   23s and 1s     |
 | DE                 |     93.30%     |     0.8890   |   9x5s and 2.3s  |
 
 
