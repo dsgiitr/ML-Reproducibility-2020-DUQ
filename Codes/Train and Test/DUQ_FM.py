@@ -23,8 +23,12 @@ def train_model(l_gradient_penalty, length_scale, final_model,epochs):
     input_size = 28
     num_classes = 10
     embedding_size = 256
-    learnable_length_scale = False
+    learnable_length_scale = False #Learnable length scale
     gamma = 0.999
+    input_dep_ls = False #input dependent length scale (sigma)
+
+    if input_dep_ls and learnable_length_scale: #only one can be True
+        learnable_length_scale=False
 
 
     ## Main (FashionMNIST) and ood (Mnist) Dataset
@@ -63,6 +67,7 @@ def train_model(l_gradient_penalty, length_scale, final_model,epochs):
         learnable_length_scale,
         length_scale,
         gamma,
+        input_dep_ls 
     )
     
     model = model.cuda()
@@ -119,7 +124,9 @@ def train_model(l_gradient_penalty, length_scale, final_model,epochs):
 
         loss = F.binary_cross_entropy(y_pred, y)
         loss += l_gradient_penalty * calc_gradient_penalty(x, y_pred.sum(1))
-
+        
+        #gradient normalization
+        #loss/=(1+l_gradient_penalty) 
         x.requires_grad_(False)
 
         loss.backward()

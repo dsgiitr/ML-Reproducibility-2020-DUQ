@@ -1,0 +1,13 @@
+
+Class independent - mean over 3 runs
+{'lgp0.05_ls0.1': [('val acc', 0.9229666666666668), ('test acc', 0.9229666666666668), ('M auroc', 0.9623827283333334), ('NM auroc', 0.9380896033611051)], 
+'lgp0.2_ls0.1': [('val acc', 0.9200666666666666), ('test acc', 0.9200666666666666), ('M auroc', 0.9582276900000001), ('NM auroc', 0.9447471115502385)]}
+
+Auroc increases with big margin (+1pt M) (+0.5pt NM)
+Accuracy increases slighltly (+0.2%)
+(For small and high gp)
+
+
+
+Class dependent
+{'lgp0.05_ls0.1': [('val acc', 0.9232), ('test acc', 0.9232), ('M auroc', 0.83339862), ('NM auroc', 0.8799277130954924)]}

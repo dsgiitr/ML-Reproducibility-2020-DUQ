@@ -40,4 +40,37 @@ DUQ is much faster and slightly slower than single model at testing
 DUQ without gp takes slighlty more time than single model at training
 DUQ with gp takes twice/thrice more time than single model at training
 DUQ gives the competitive edge
+Best tradeoff between AUROC-Accuracy-Time
+
+
+
+Aleatoric sensitivity
+DUQ is sensitive to noise, identifies aleatoric uncertainity also
+After a certain threshold it doesn't treat noisy data as part of distibution (confidence is spread out)
+Aleotoric Sensitivity can be reduced using Input-dependent length-scale
+
+Misc:
+Ablation of centroid size-
+Inc centroid increases auroc strongly
+But test accuracy is almost same for any size
+
+Ablation in Gradient constant -
+Better control than gp magnitude control
+Gives better AUROC and Accuracy at the same time
+
+Use of normalised loss -
+(for all gp) 
+Increases Auroc by a big margin(FM +1pt increase)
+Marginal increase in test-accuracy
+
+Use of input-dependent ls -
+(for all gp)
+Reduces aleatoric sensitivity
+Slight increase in test accuracy, (FM +0.2%) 
+Class independent sigma: Increases Auroc significantly (FM +1,2 pts) 
+Class dependent sigma: Degrades auroc -10pts (for all gp)
+
+Achieved- (with input-dependent ls and Gradient normalisation on FM)
+{'lgp0.05': [('test acc', 0.9263), ('M auroc', 0.9689840899999999), ('NM auroc', 0.9503402024140141)]}
+
 
