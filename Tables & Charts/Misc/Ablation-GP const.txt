@@ -1,0 +1,19 @@
+{'lgp0.05_ls0.1_gpconst0.01': [('val acc', 0.9219), ('test acc', 0.9219), ('M auroc', 0.9599510699999999), ('NM auroc', 0.9484458876308483)], 
+'lgp0.05_ls0.1_gpconst0.05': [('val acc', 0.922), ('test acc', 0.922), ('M auroc', 0.943306005), ('NM auroc', 0.9340217768639181)], 
+'lgp0.05_ls0.1_gpconst0.1': [('val acc', 0.9262), ('test acc', 0.9262), ('M auroc', 0.9529671499999999), ('NM auroc', 0.9479456125827816)], 
+'lgp0.05_ls0.1_gpconst0.5': [('val acc', 0.9207), ('test acc', 0.9207), ('M auroc', 0.9349473549999999), ('NM auroc', 0.9558392677846614)], 
+'lgp0.05_ls0.1_gpconst1': [('val acc', 0.9212), ('test acc', 0.9212), ('M auroc', 0.9372058750000001), ('NM auroc', 0.9423736087374492)], 
+'lgp0.05_ls0.1_gpconst3': [('val acc', 0.9156), ('test acc', 0.9156), ('M auroc', 0.91252208), ('NM auroc', 0.894067170476394)], 
+
+'lgp1_ls0.1_gpconst0.01': [('val acc', 0.9214), ('test acc', 0.9214), ('M auroc', 0.9331222849999999), ('NM auroc', 0.9283223242896816)],
+ 'lgp1_ls0.1_gpconst0.05': [('val acc', 0.92), ('test acc', 0.92), ('M auroc', 0.935741475), ('NM auroc', 0.9157322260200812)],
+ 'lgp1_ls0.1_gpconst0.1': [('val acc', 0.9251), ('test acc', 0.9251), ('M auroc', 0.9488388500000001), ('NM auroc', 0.9325821806237984)], 
+ 'lgp1_ls0.1_gpconst0.5': [('val acc', 0.9205), ('test acc', 0.9205), ('M auroc', 0.9520658950000003), ('NM auroc', 0.9365368564409313)], 
+ 'lgp1_ls0.1_gpconst1': [('val acc', 0.9109), ('test acc', 0.9109), ('M auroc', 0.9401690949999999), ('NM auroc', 0.9023253765221108)], 
+ 'lgp1_ls0.1_gpconst3': [('val acc', 0.1), ('test acc', 0.1), ('M auroc', 0.50035), ('NM auroc', 0.49941251869258707)]}
+ 
+GP const is a better control than gp magnitude control
+It gives very high auroc and test accuracy at the same time, experimentally.
+ 
+Best const is 0.1 for FMNIST, keeping gp mag fixed at 0.05
+ 
