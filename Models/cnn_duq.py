@@ -44,10 +44,12 @@ class CNN_DUQ(Model):
         learnable_length_scale,
         length_scale,
         gamma,
+        inputdepls = False
     ):
         super().__init__()
 
         self.gamma = gamma
+        self.inputdepls=inputdepls
 
         self.W = nn.Parameter(
             torch.normal(torch.zeros(embedding_size, num_classes, 256), 0.05)
@@ -59,7 +61,9 @@ class CNN_DUQ(Model):
         )
 
         self.m = self.m * self.N.unsqueeze(0)
-
+        
+        if inputdepls:
+            self.sigmann=nn.Linear(256,1)
         if learnable_length_scale:
             self.sigma = nn.Parameter(torch.zeros(num_classes) + length_scale)
         else:
@@ -89,7 +93,10 @@ class CNN_DUQ(Model):
         return distances
 
     def forward(self, x):
-        z = self.last_layer(self.compute_features(x))
+        z=self.compute_features(x)
+        if self.inputdepls:
+            self.sigma = torch.sigmoid(self.sigmann(z))+0.01
+        z = self.last_layer(z)
         y_pred = self.output_layer(z)
 
         return z, y_pred

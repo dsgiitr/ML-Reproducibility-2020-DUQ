@@ -1,0 +1,13 @@
+Runs = 5
+
+'lgp1_ls0.1_gpconst0.01': [('test acc', 0.91898, 0.000318), ('M auroc', 0.9288, 0.001975), ('NM auroc', 0.9215, 0.0052)], 
+'lgp1_ls0.1_gpconst0.05': [('test acc', 0.9210, 0.00083), ('M auroc', 0.9372, 0.00411), ('NM auroc', 0.9366, 0.005962)], 
+'lgp1_ls0.1_gpconst0.1': [('test acc', 0.9223, 0.00135), ('M auroc', 0.9518, 0.0046), ('NM auroc', 0.9358, 0.00371)], 
+'lgp1_ls0.1_gpconst0.5': [('test acc', 0.9236, 0.00195), ('M auroc', 0.9536, 0.00482), ('NM auroc', 0.9403, 0.0075)], 
+'lgp1_ls0.1_gpconst1': [('test acc', 0.9115, 0.00223), ('M auroc', 0.9183, 0.01816), ('NM auroc', 0.9184, 0.01744)]
+ 
+GP const is a better control than gp magnitude control
+It gives very high auroc and test accuracy at the same time, experimentally.
+ 
+Best const is 0.5 for FMNIST, keeping gp mag fixed at 1
+ 

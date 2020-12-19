@@ -18,15 +18,14 @@ from utils.datasets import FastFashionMNIST, get_FashionMNIST
 from utils.cnn_duq import CNN_DUQ
 
 model={}
-def train_model(l_gradient_penalty, length_scale, final_model,epochs):
+def train_model(l_gradient_penalty, length_scale, final_model,epochs,input_dep_ls,use_grad_norm):
 
     input_size = 28
     num_classes = 10
     embedding_size = 256
     learnable_length_scale = False #Learnable length scale
     gamma = 0.999
-    input_dep_ls = False #input dependent length scale (sigma)
-
+    
     if input_dep_ls and learnable_length_scale: #only one can be True
         learnable_length_scale=False
 
@@ -34,7 +33,6 @@ def train_model(l_gradient_penalty, length_scale, final_model,epochs):
     ## Main (FashionMNIST) and ood (Mnist) Dataset
     dataset = FastFashionMNIST("data/", train=True, download=True)
     test_dataset = FastFashionMNIST("data/", train=False, download=True)
-
     idx = list(range(60000))
     random.shuffle(idx)
 
@@ -67,7 +65,7 @@ def train_model(l_gradient_penalty, length_scale, final_model,epochs):
         learnable_length_scale,
         length_scale,
         gamma,
-        input_dep_ls 
+        input_dep_ls
     )
     
     model = model.cuda()
@@ -125,8 +123,10 @@ def train_model(l_gradient_penalty, length_scale, final_model,epochs):
         loss = F.binary_cross_entropy(y_pred, y)
         loss += l_gradient_penalty * calc_gradient_penalty(x, y_pred.sum(1))
         
-        #gradient normalization
-        #loss/=(1+l_gradient_penalty) 
+        if use_grad_norm:
+            #gradient normalization
+            loss/=(1+l_gradient_penalty)
+        
         x.requires_grad_(False)
 
         loss.backward()
@@ -192,7 +192,7 @@ def train_model(l_gradient_penalty, length_scale, final_model,epochs):
                 f"AUROC MNIST: {roc_auc_mnist:.4f} "
                 f"AUROC NotMNIST: {roc_auc_notmnist:.2f} "
             )
-            print(f"Sigma: {model.sigma}")
+            #print(f"Sigma: {model.sigma}")
 
     # Train
     trainer.run(dl_train, max_epochs=epochs)
@@ -206,7 +206,7 @@ def train_model(l_gradient_penalty, length_scale, final_model,epochs):
     test_accuracy = evaluator.state.metrics["accuracy"]
 
     return model, val_accuracy, test_accuracy
-
+    
 if __name__ == "__main__":
     _, _, _, fashionmnist_test_dataset = get_FashionMNIST()
 
@@ -214,8 +214,10 @@ if __name__ == "__main__":
     length_scales = [0.1]
     epochs=30
 
-    repetition = 1  # Increase for multiple repetitions
+    repetition = 3  # Increase for multiple repetitions
     final_model = True  # set true for final model to train on full train set
+    input_dep_ls = False #input dependent length scale (sigma)
+    use_grad_norm = False #gradient normalization
 
     results = {}
 
@@ -229,7 +231,7 @@ if __name__ == "__main__":
             for _ in range(repetition):
                 print(" ### NEW MODEL ### ")
                 model, val_accuracy, test_accuracy = train_model(
-                    l_gradient_penalty, length_scale, final_model, epochs
+                    l_gradient_penalty, length_scale, final_model, epochs, input_dep_ls,use_grad_norm
                 )
                 accuracy, roc_auc_mnist = get_fashionmnist_mnist_ood(model)
                 _, roc_auc_notmnist = get_fashionmnist_notmnist_ood(model)
@@ -241,10 +243,10 @@ if __name__ == "__main__":
             
             # All stats
             results[f"lgp{l_gradient_penalty}_ls{length_scale}"] = [
-                ("val acc", np.mean(val_accuracies)),
-                ("test acc", np.mean(test_accuracies)),
-                ("M auroc", np.mean(roc_aucs_mnist)),
-                ("NM auroc", np.mean(roc_aucs_notmnist)),
+                ("val acc", np.mean(val_accuracies),np.std(val_accuracies)),
+                ("test acc", np.mean(test_accuracies), np.std(test_accuracies)),
+                ("M auroc", np.mean(roc_aucs_mnist), np.std(roc_aucs_mnist)),
+                ("NM auroc", np.mean(roc_aucs_notmnist), np.std(roc_aucs_notmnist)),
             ]
             #print(results[f"lgp{l_gradient_penalty}_ls{length_scale}"])
     
