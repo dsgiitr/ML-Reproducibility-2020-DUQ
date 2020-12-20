@@ -71,6 +71,7 @@ Class independent sigma: Increases Auroc significantly (FM +1,2 pts)
 Class dependent sigma: Degrades auroc -10pts (for all gp)
 
 Achieved- (with input-dependent ls and Gradient normalisation on FM)
-{'lgp0.05': [('test acc', 0.9263), ('M auroc', 0.9689840899999999), ('NM auroc', 0.9503402024140141)]}
+'lgp0.05_ls0.1': [('test acc', 0.9227, 0.000385), ('M auroc', 0.9663, 0.00129), ('NM auroc', 0.9514, 0.0106)]
+*mean over 3 runs
 
 

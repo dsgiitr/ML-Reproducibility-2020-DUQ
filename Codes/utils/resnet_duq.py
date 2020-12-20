@@ -12,10 +12,12 @@ class ResNet_DUQ(nn.Module):
         model_output_size,
         length_scale,
         gamma,
+        input_dep_ls=False
     ):
         super().__init__()
 
         self.gamma = gamma
+        self.input_dep_ls=input_dep_ls
 
         self.W = nn.Parameter(
             torch.zeros(centroid_size, num_classes, model_output_size)
@@ -36,10 +38,16 @@ class ResNet_DUQ(nn.Module):
             "m", torch.normal(torch.zeros(centroid_size, num_classes), 0.05)
         )
         self.m = self.m * self.N
-
+        
+        if input_dep_ls:
+            self.sigmann=nn.Linear(model_output_size,1)
         self.sigma = length_scale
 
     def rbf(self, z):
+    
+        if self.input_dep_ls:
+            self.sigma = torch.sigmoid(self.sigmann(z))+0.01
+            
         z = torch.einsum("ij,mnj->imn", z, self.W)
 
         embeddings = self.m / self.N.unsqueeze(0)

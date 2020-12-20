@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torchvision.models import resnet18
 
 class ResNet(nn.Module):
     def __init__(self, input_size, num_classes):

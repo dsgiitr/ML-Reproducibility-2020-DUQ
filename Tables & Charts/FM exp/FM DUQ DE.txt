@@ -1,6 +1,10 @@
-DUQ(gp=0.05 5 Runs, 30 epochs:
-'lgp0.05_ls0.1': [('val acc', 0.92346), ('test acc', 0.92346), ('M auroc', 0.941154264), ('NM auroc', 0.9509201746421704)]
+DUQ(gp=0.05 3 Runs, 30 epochs:
+'lgp0.05_ls0.1': [('val acc', 0.9223, 0.00147), ('test acc', 0.92223, 0.001470), ('M auroc', 0.9427, 0.00706), ('NM auroc', 0.9571, 0.00641)]
 DE(5) papers architecture, 2 runs, 30 epochs:
 {'Accuracy':0.9330, 'AUROC(M)':0.889}
 DE(1) papers architecture, avg of 5 models, 30 epochs:
 {'Accuracy':0.9232, 'AUROC(M)':0.8370}
+
+Achieved- (with input-dependent ls and Gradient normalisation on FM)
+'lgp0.05_ls0.1': [('test acc', 0.9227, 0.000385), ('M auroc', 0.9663, 0.00129), ('NM auroc', 0.9514, 0.0106)]
+*mean over 3 runs

@@ -1,8 +1,0 @@
-{'lgp0.05_ls0.1_centroidsz2': [('val acc', 0.1), ('test acc', 0.1), ('M auroc', 0.5), ('NM auroc', 0.5)],
- 'lgp0.05_ls0.1_centroidsz10': [('val acc', 0.9215), ('test acc', 0.9215), ('M auroc', 0.8872238050000001), ('NM auroc', 0.8903321672719504)]
- 'lgp0.05_ls0.1_centroidsz50': [('val acc', 0.9217), ('test acc', 0.9217), ('M auroc', 0.931159415), ('NM auroc', 0.8845841513565478)],
- 'lgp0.05_ls0.1_centroidsz256': [('val acc', 0.922), ('test acc', 0.922), ('M auroc', 0.931912965), ('NM auroc', 0.9546985152745141)],
- 'lgp0.05_ls0.1_centroidsz500': [('val acc', 0.9232), ('test acc', 0.9232), ('M auroc', 0.9591763700000002), ('NM auroc', 0.9610677312540056)]
- 'lgp0.05_ls0.1_centroidsz1000': [('val acc', 0.9211), ('test acc', 0.9211), ('M auroc', 0.9557575850000001), ('NM auroc', 0.9669049134800256)]}
- 
- Not much of a difference in accuracy(slight inc) but tremendous inc in auroc
