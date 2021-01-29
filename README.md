@@ -58,17 +58,17 @@ Performance of the model with our implementation at a glance:
 
 | Model name         | Accuracy on FM | Auroc-ood(M) | Train, Test Time*|
 | ------------------ |--------------- | ------------ | ---------------- |
-| DUQ with gp        |     92.34%     |     0.9411   |   23s and 1s     |
-| DUQ + our work     |     92.63%     |     0.9690   |   23s and 1s     |
-| DE                 |     93.30%     |     0.8890   |   9x5s and 2.3s  |
+| DUQ with gp        |     92.13%     |     0.947    |   23s and 1s     |
+| DUQ + our work     |     93.35%     |     0.964    |   23s and 1s     |
+| DE                 |     93.30%     |     0.889    |   9x5s and 2.3s  |
 
 
 ### CIFAR10, SVHN-ood
 
 | Model name         | Accuracy on CIFAR10 | Auroc-ood(M) | Train, Test Time*|
 | ------------------ |-------------------- | ------------ | ---------------- |
-| DUQ with gp        |       93.45%        |     0.9313   |   210s and 4s    |
-| DE                 |       94.44%        |     0.9489   |   60x5s and 14s  |
+| DUQ with gp        |       93.45%        |     0.931    |   210s and 4s    |
+| DE                 |       94.44%        |     0.949    |   60x5s and 14s  |
 
 ## Reference
 ```
