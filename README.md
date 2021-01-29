@@ -40,8 +40,9 @@ mkdir -p data && cd data && curl -O "http://yaroslavvb.com/upload/notMNIST/notMN
 
 Training: will be done on FMnist or CIFAR-10 <br>
 Testing: Accuracy will be calculated on testset of FMnist or CIFAR-10 <br>
-Testing: Auroc-ood will be calculated on FMnist+Mnist-ood or CIFAR10+SVHN-ood <br>
-Trained models are required to execute the experiment codes
+Testing: Auroc-ood will be calculated on FMnist+Mnist-ood or CIFAR10+SVHN-ood <br><br>
+Trained models are required to execute the experiment codes <br>
+Experiment codes are self explanatory (includes uncertainty Histograms, rejection plots, ROC curve, aleatoric plots, uncertainty maps)
 
 ## Pre-trained Models
 
@@ -59,7 +60,7 @@ Performance of the model with our implementation at a glance:
 | Model name         | Accuracy on FM | Auroc-ood(M) | Train, Test Time*|
 | ------------------ |--------------- | ------------ | ---------------- |
 | DUQ with gp        |     92.13%     |     0.947    |   23s and 1s     |
-| DUQ + our work     |     93.35%     |     0.964    |   23s and 1s     |
+| DUQ + our work     |     92.35%     |     0.964    |   23s and 1s     |
 | DE                 |     93.30%     |     0.889    |   9x5s and 2.3s  |
 
 
